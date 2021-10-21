@@ -1,0 +1,6 @@
+- name: send the config file
+  copy: src=apache2.conf dest=/etc/apache2/apache2.conf
+  notify: restart apache
+
+- name: send the index file
+  copy: src=index.html dest=/var/www/html/index.html
